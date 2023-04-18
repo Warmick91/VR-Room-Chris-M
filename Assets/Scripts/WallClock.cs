@@ -19,9 +19,10 @@ public class WallClock : MonoBehaviour
     {
         DateTime time = DateTime.Now;
 
-        float hourHandAngle = (360f / 12f) * time.Hour;
+        //float hourHandAngle = (360f / 3600f) * time.Second;
+        float hourHandAngle = (360f / 12) * (time.Hour % 12 + time.Minute / 60f);
         float minuteHandAngle = (360f / 60) * time.Minute;
-        float secondHandAngle = (360 / 60) * time.Second;
+        float secondHandAngle = (360f / 60) * time.Second;
 
         hourHand.transform.localRotation = Quaternion.Euler(hourHandAngle, 0, 0);
         minuteHand.transform.localRotation = Quaternion.Euler(minuteHandAngle, 0, 0);

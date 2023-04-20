@@ -28,4 +28,5 @@ public class WallClock : MonoBehaviour
         minuteHand.transform.localRotation = Quaternion.Euler(minuteHandAngle, 0, 0);
         secondHand.transform.localRotation = Quaternion.Euler(secondHandAngle, 0, 0);
     }
+
 }

@@ -18,9 +18,13 @@ public class OnTrigger : MonoBehaviour
     // When the object exits a collision
     public TriggerEvent OnExit = new TriggerEvent();
 
+    // Add a reference to the ToggleParticle script
+    public ToggleParticle lighterToggleParticle;
+
     private void OnTriggerEnter(Collider other)
-    {
-        if (CanTrigger(other.gameObject))
+    {   
+        // Also checks if the lighter is on. Perhaps shoudl make another script of it.
+        if (CanTrigger(other.gameObject) && lighterToggleParticle.isPlaying)
             OnEnter?.Invoke(other);
     }
 

@@ -21,11 +21,21 @@ public class OnTrigger : MonoBehaviour
     // Add a reference to the ToggleParticle script
     public ToggleParticle lighterToggleParticle;
 
+
     private void OnTriggerEnter(Collider other)
-    {   
-        // Also checks if the lighter is on. Perhaps shoudl make another script of it.
-        if (CanTrigger(other.gameObject) && lighterToggleParticle.isPlaying)
-            OnEnter?.Invoke(other);
+    {
+        if (other.CompareTag("LighterFlame"))
+        {
+            // Also checks if the lighter is on
+            if (CanTrigger(other.gameObject) && lighterToggleParticle.isPlaying)
+                OnEnter?.Invoke(other);
+                Debug.Log("The candle has been lit");
+        }
+        else
+        {
+            if (CanTrigger(other.gameObject))
+                OnEnter?.Invoke(other);
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -36,7 +46,7 @@ public class OnTrigger : MonoBehaviour
 
     private bool CanTrigger(GameObject otherGameObject)
     {
-        if(requiredTag != string.Empty)
+        if (requiredTag != string.Empty)
         {
             return otherGameObject.CompareTag(requiredTag);
         }

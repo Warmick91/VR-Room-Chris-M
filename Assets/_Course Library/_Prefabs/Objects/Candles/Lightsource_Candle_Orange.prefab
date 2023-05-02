@@ -505,6 +505,7 @@ MonoBehaviour:
   OnExit:
     m_PersistentCalls:
       m_Calls: []
+  lighterToggleParticle: {fileID: 0}
 --- !u!114 &6485262767631931013
 MonoBehaviour:
   m_ObjectHideFlags: 0

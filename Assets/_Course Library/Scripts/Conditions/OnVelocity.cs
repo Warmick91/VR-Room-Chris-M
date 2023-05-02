@@ -9,7 +9,7 @@ using UnityEngine.Events;
 public class OnVelocity : MonoBehaviour
 {
     [Tooltip("The speed calls the begin event")]
-    public float beginThreshold = 1.25f;
+    public float beginThreshold = 1.50f;
 
     [Tooltip("The speed calls the end event")]
     public float endThreshold = 0.25f;

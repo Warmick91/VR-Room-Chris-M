@@ -13,7 +13,7 @@ public class LaunchProjectile : MonoBehaviour
     public Transform startPoint = null;
 
     [Tooltip("The speed at which the projectile is launched")]
-    public float launchSpeed = 1.0f;
+    public float launchSpeed; // = 1000.0f;
 
     public void Fire()
     {
@@ -21,6 +21,7 @@ public class LaunchProjectile : MonoBehaviour
 
         if (newObject.TryGetComponent(out Rigidbody rigidBody))
             ApplyForce(rigidBody);
+
     }
 
     private void ApplyForce(Rigidbody rigidBody)

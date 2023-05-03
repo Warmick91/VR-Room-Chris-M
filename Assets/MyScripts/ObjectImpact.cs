@@ -43,7 +43,7 @@ public class ObjectImpact : MonoBehaviour
                 break;
 
             default:
-                Debug.Log("Impact without sound");
+                //Debug.Log("Impact without sound");
                 break;
         }
     }

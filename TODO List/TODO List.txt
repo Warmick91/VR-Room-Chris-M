@@ -1,1 +1,2 @@
 1) Add a functioning polaroid camera (Events and Interactions, 2.2 - 6)
+2) Check why the splashing sound from the watering can is being activated at the wrong time

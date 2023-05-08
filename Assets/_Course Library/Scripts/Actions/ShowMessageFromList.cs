@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -26,14 +27,16 @@ public class ShowMessageFromList : MonoBehaviour
 
     public void NextMessage()
     {
-        int newIndex = ++index % messages.Count;
+        //int newIndex = ++index % messages.Count;
 
-        if (newIndex < index)
+        if (index == messages.Count - 1)
         {
+            Debug.Log("Invoking OnComplete");
             OnComplete.Invoke();
         }
         else
-        {
+        {   
+            ++index;
             ShowMessage();
         }
     }
@@ -54,4 +57,5 @@ public class ShowMessageFromList : MonoBehaviour
         index = value;
         ShowMessage();
     }
+
 }

@@ -7,6 +7,7 @@ TagManager:
   - Panel
   - Door
   - LighterFlame
+  - Hand
   layers:
   - Default
   - TransparentFX

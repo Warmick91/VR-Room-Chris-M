@@ -2,3 +2,5 @@
 2) Check why the splashing sound from the watering can is being activated at the wrong time
 3) The cabinet door hinges suck ass but I don't have it in me to fix them now. Check it out later.
 4) Add contextual tooltips [Hard] (User Interface, 2.4 - Extension Activities)
+5) Can't rotate the pedestal in Challenge 2
+6) "There is no way to save your work." in Challenge 2

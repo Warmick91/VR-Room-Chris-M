@@ -38,13 +38,12 @@ public class ConvertValueToHue : MonoBehaviour
     public UnityEvent OnSliderHandRelease;
 
     private void HandleSelectExit(SelectExitEventArgs args)
-    {
-        if (args.interactorObject.Equals(sliderHandle))
+    {   
+        if (args.interactableObject.Equals(sliderHandle))
         {   
             OnSliderHandRelease.Invoke();
             Debug.Log("Handle released");
-        }
-            
+        }   
     }
 
 }

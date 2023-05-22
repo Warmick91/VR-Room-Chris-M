@@ -42,7 +42,5 @@ public class ChangeMaterial : MonoBehaviour
         {
             meshRenderer.material = originalMaterial;
         }
-
-        Debug.Log("Current flashlight material: " + meshRenderer.material.name);
     }
 }
